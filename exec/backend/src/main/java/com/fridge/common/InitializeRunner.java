@@ -13,10 +13,10 @@ public class InitializeRunner implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception {
-		// ì‹¤í–‰ ì‹œ í´ë”ê°€ ì—†ìœ¼ë©´ í´ë” ìƒì„±
+		// ?‹¤?–‰ ?‹œ ?´?”ê°? ?—†?œ¼ë©? ?´?” ?ƒ?„± 
 		String filePath = "fridge";
 		File folder = new File(filePath);
-
+		// È®ÀÎ
 		if (!folder.exists()) {
 			try {
 				folder.mkdir();
@@ -30,7 +30,7 @@ public class InitializeRunner implements CommandLineRunner {
 
 		if (!folder.exists()) {
 			try {
-				folder.mkdir(); // í´ë” ìƒì„±í•©ë‹ˆë‹¤.
+				folder.mkdir(); // ?´?” ?ƒ?„±?•©?‹ˆ?‹¤.
 				logger.info("make a fridge/post folder");
 			} catch (Exception e) {
 				logger.error(e.getMessage());
