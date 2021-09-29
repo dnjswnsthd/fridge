@@ -13,10 +13,10 @@ public class InitializeRunner implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception {
-		// ?떎?뻾 ?떆 ?뤃?뜑媛? ?뾾?쑝硫? ?뤃?뜑 ?깮?꽦 
+		// 실행 시 폴더가 없으면 폴더 생성 
 		String filePath = "fridge";
 		File folder = new File(filePath);
-		// 확인
+
 		if (!folder.exists()) {
 			try {
 				folder.mkdir();
@@ -30,7 +30,7 @@ public class InitializeRunner implements CommandLineRunner {
 
 		if (!folder.exists()) {
 			try {
-				folder.mkdir(); // ?뤃?뜑 ?깮?꽦?빀?땲?떎.
+				folder.mkdir(); // 폴더 생성합니다.
 				logger.info("make a fridge/post folder");
 			} catch (Exception e) {
 				logger.error(e.getMessage());
